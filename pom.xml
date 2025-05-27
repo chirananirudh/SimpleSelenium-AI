@@ -7,7 +7,6 @@
 	<version>0.0.1-SNAPSHOT</version>
 
 	<dependencies>
-
 		<!--
 		https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 		<dependency>
@@ -15,7 +14,6 @@
 			<artifactId>selenium-java</artifactId>
 			<version>4.23.1</version>
 		</dependency>
-
 		<!--
 		https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-support -->
 		<dependency>
@@ -23,7 +21,6 @@
 			<artifactId>selenium-support</artifactId>
 			<version>4.23.1</version>
 		</dependency>
-
 		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
 		<dependency>
 			<groupId>org.testng</groupId>
@@ -31,8 +28,6 @@
 			<version>7.9.0</version>
 			<scope>test</scope>
 		</dependency>
-
-
 	</dependencies>
 	<build>
 		<plugins>
