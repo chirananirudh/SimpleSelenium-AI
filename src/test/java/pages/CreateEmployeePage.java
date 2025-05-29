@@ -8,41 +8,40 @@ import org.openqa.selenium.support.PageFactory;
 
 public class CreateEmployeePage {
 
-    private WebDriver driver;
+	private WebDriver driver;
 
-    public CreateEmployeePage(WebDriver driver){
-        this.driver = driver;
-        PageFactory.initElements(driver, this);
-    }
+	public CreateEmployeePage(WebDriver driver) {
+		this.driver = driver;
+		PageFactory.initElements(driver, this);
+	}
 
+	@FindBy(name = "Name")
+	private WebElement txtName;
 
-    @FindBy(name = "Name")
-    private WebElement txtName;
+	@FindBy(id = "DurationWorked")
+	private WebElement txtDurationWorked;
 
-    @FindBy(id = "DurationWorked")
-    private WebElement txtDurationWorked;
+	@FindBy(name = "Email")
+	private WebElement txtEmail;
 
-    @FindBy(name = "Email")
-    private WebElement txtEmail;
+	@FindBy(name = "Salary")
+	private WebElement txtSalary;
 
-    @FindBy(name = "Salary")
-    private WebElement txtSalary;
+	@FindBy(name = "Grade")
+	private WebElement ddlGrade;
 
-    @FindBy(name = "Grade")
-    private WebElement ddlGrade;
+	@FindBy(css = ".btn")
+	private WebElement btnCreate;
 
-    @FindBy(css = ".btn")
-    private WebElement btnCreate;
-
-
-    public EmployeeListPage createNewEmployee(String name, String durationWorked, String email, String salary, String grade){
-        UIElementExtensions.performEnterText(txtName, name);
-        UIElementExtensions.performEnterText(txtDurationWorked, durationWorked);
-        UIElementExtensions.performEnterText(txtSalary, salary);
-        UIElementExtensions.performEnterText(txtEmail, email);
-        UIElementExtensions.performDropDownSelectionByText(ddlGrade, grade);
-        UIElementExtensions.performClick(btnCreate);
-        return new EmployeeListPage(driver);
-    }
+	public EmployeeListPage createNewEmployee(String name, String durationWorked, String email, String salary,
+			String grade) {
+		UIElementExtensions.performEnterText(txtName, name);
+		UIElementExtensions.performEnterText(txtDurationWorked, durationWorked);
+		UIElementExtensions.performEnterText(txtSalary, salary);
+		UIElementExtensions.performEnterText(txtEmail, email);
+		UIElementExtensions.performDropDownSelectionByText(ddlGrade, grade);
+		UIElementExtensions.performClick(btnCreate);
+		return new EmployeeListPage(driver);
+	}
 
 }
