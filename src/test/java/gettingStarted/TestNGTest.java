@@ -1,29 +1,31 @@
 package gettingStarted;
 
 import org.testng.annotations.Test;
-
-
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class TestNGTest {
 
+    private static final Logger logger = LoggerFactory.getLogger(TestNGTest.class);
+
     @Test
     public void testLogin() {
-        System.out.println("Testing the login operation");
+        logger.info("Testing the login operation");
     }
 
     @Test
     public void testCreateUser() {
-        System.out.println("Testing the Create User operaetion");
+        logger.info("Testing the Create User operaetion");
     }
 
     @Test
     public void testLogoff() {
-        System.out.println("Testing the log off operation");
+        logger.info("Testing the log off operation");
     }
 
     @Test
     public void testSettings() {
-        System.out.println("Testing the settings operation");
+        logger.info("Testing the settings operation");
     }
 
 }
