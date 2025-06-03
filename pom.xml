@@ -28,6 +28,19 @@
 			<version>7.9.0</version>
 			<scope>test</scope>
 		</dependency>
+		<!-- SLF4J API -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>2.0.13</version>
+		</dependency>
+		<!-- Logback Classic (includes logback-core and slf4j-api) -->
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>1.5.6</version>
+			<scope>test</scope> <!-- Typically for test logging -->
+		</dependency>
 	</dependencies>
 	<build>
 		<plugins>
