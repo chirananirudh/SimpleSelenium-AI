@@ -1,6 +1,5 @@
 package gettingStarted;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -34,13 +33,13 @@ public class SeleniumTest {
 
         //1. Create a WebDriver with ChromeDriver object
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless");
-        options.addArguments("--disable-gpu"); // often recommended with headless
-        options.addArguments("--window-size=1920,1080"); // optional, but good for consistency
-        options.addArguments("--no-sandbox"); //  Bypass OS security model, REQUIRED for running as root user (often the case in CI)
-        options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
-        options.addArguments("--remote-allow-origins=*"); // allow all origins
-        options.addArguments("--user-data-dir=" + System.getProperty("java.io.tmpdir") + "/chrome-user-data-" + System.currentTimeMillis());
+//        options.addArguments("--headless");
+//        options.addArguments("--disable-gpu"); // often recommended with headless
+//        options.addArguments("--window-size=1920,1080"); // optional, but good for consistency
+//        options.addArguments("--no-sandbox"); //  Bypass OS security model, REQUIRED for running as root user (often the case in CI)
+//        options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
+//        options.addArguments("--remote-allow-origins=*"); // allow all origins
+//        options.addArguments("--user-data-dir=" + System.getProperty("java.io.tmpdir") + "/chrome-user-data-" + System.currentTimeMillis());
 
         //2. Launch the browser
         driver = new ChromeDriver(options);
